@@ -1,0 +1,220 @@
+/*  Mobile/Tablet Navigation  */ 
+@media (max-width: 992px) {
+  #slide-container {
+    min-height: 100%;
+    overflow-x: hidden;
+  }
+  #slide-container .main-nav {
+    display: inline-block;
+    background-color: #f8f8f8;
+    height: 100%;
+    border-right: 1px solid #ddd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    z-index: 1000;
+  }
+
+  #slide-container.opened {
+    position: absolute;
+    min-width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+  }
+  #slide-container.opened .main-nav {
+    width: 40%;
+    padding: 10px 10px 0 10px;
+  }
+  #slide-container.opened #slide-body {
+    position: relative;
+    left: 40%;
+  }
+  #slide-container #slide-body #overlay {
+      position: absolute;
+      display: none;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: .5;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      z-index: 1000;
+      background-color: gray;
+  }
+  #slide-container .main-nav>.menu_item {
+      font-size: 18px;
+      font-weight: normal;
+      float: none;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      background: #fff;
+  }
+  #slide-container .main-nav>.menu_item>a {
+    font-weight: normal;
+    color: #ec3440;
+    padding: 15px 15px;
+    position: relative;
+    display: block;
+  }
+  #slide-container .main-nav>.menu_item>.submenu_item {
+    font-size: .8em;
+    width: 100%;
+    position: inherit;
+    float: none;
+    padding-left: 1em;
+  }
+  .main-nav.navbar-nav .menu_item .submenu_item {
+    text-align: left;
+    background-color: #fff;
+    padding: 1em;
+  }
+  #slide-container .main-nav .collapse {
+    display: none;
+  }
+  #slide-container .main-nav .opened {
+    display: block;
+  }
+  #slide-container .main-nav>.menu_item>.submenu_item li {
+    height: 3em;
+    line-height: 3em;
+  }
+
+  #slide-container .main-nav>.menu_item>.submenu_item li a{
+    white-space: nowrap;
+    display: inherit;
+  }
+  .accordianIcon{
+    float: right;
+    position: relative;
+    top: -47px;
+    right: 15px;
+    font-size: 24px;
+  }
+
+  .icon-plus::before {
+    content: "+";
+  }
+  .icon-minus::before {
+    content: "-";
+  }
+  
+}
+
+@media (max-width: 767px) and (max-width: 991px) {
+  #slide-container.opened .main-nav {
+    width: 80%;
+    padding: 10px 10px 0 10px;
+  }
+  #slide-container.opened #slide-body {
+    position: relative;
+    left: 80%;
+  }
+}
+
+
+/*  Desktop Navigation  */ 
+@media (min-width: 993px) {
+  ul.main-nav{
+    position: relative;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+  }
+  ul.main-nav,
+  ul.main-nav > li{
+    float: left;
+  }
+  ul.main-nav .menu_item {
+    position: relative;
+    display: inline-block;
+  }
+  .menu_item .downArrow{
+    border: solid #777;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    height: 0px;
+    position: relative;
+    top: 22px;
+    left: 6px;
+  }
+  .menu_item .submenu_link {
+    font-size: 16px;
+    color: #777;
+    float: left;
+    line-height: 53px;
+    font-weight: bold;
+    display: inline-flex;
+    padding: 0 14px 0 12px;
+  }
+  .menu_item:hover .submenu_link{
+    color: #fff;
+    background-color: #ec3440;
+  }
+  .menu_item:hover .submenu_link .downArrow {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+  }
+  .submenu_item {
+    display: none;
+    position: absolute;
+    top:52px;
+    left: -0.5px;
+    min-width: 250px;
+    border: 1px solid #ddd;
+    z-index: 1000;
+    text-align: left;
+    background-color: #fff;
+    padding: 12px;
+  }
+  .submenu_item a {
+    color: #000;
+    font-size: 16px;
+    padding: 2px 0;
+    display: block;
+    white-space: nowrap;
+  }
+  .menu_item:hover .submenu_item {
+    display: table;
+    width: 100%;
+  }
+
+}
+
+
+
+.menu_item hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px solid #ddd;
+  height:0px;
+}
+
+.submenu_item .rightArrow{
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.submenu_item a:hover {
+  color: #ec3440;
+}
+.submenu_item a:hover .rightArrow {
+  border: solid #ec3440;
+  border-width: 0 3px 3px 0;
+}
