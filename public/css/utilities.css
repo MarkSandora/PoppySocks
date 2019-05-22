@@ -1,0 +1,35 @@
+/*************** 
+    UTILITIES   
+****************/
+
+.u-hide {
+  display: none !important;
+}
+.u-show {
+  display: block !important;
+}
+
+.u-align-left{
+  text-align: left;
+}
+.u-align-right {
+  text-align: right;
+}
+
+.u-float-left{
+  float: left;
+}
+.u-float-right{
+  float: right;
+}
+
+@media only screen and (min-width: 993px) {
+  .u-hide-desktop{
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .u-hide-mobile{
+    display: none !important;
+  }
+}
